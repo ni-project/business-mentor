@@ -19,7 +19,7 @@ yarn build
 
 Рабочее приложение можно посмотреть по адресу:
 ```
-https://
+https://ni-project.github.io/business-mentor-build/
 ```
 
 ### Опции
