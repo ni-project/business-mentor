@@ -43,14 +43,14 @@ export default class AppTariff {
   };
 
   timerSet = (time) => {
-    if ( this.$timerInterval ) clearInterval(this.$timerInterval);
+    const day = this.$date.getDate();
+    const monthOriginal = this.$date.getMonth() + 1;
+    const month = this.dateTimeHelper(monthOriginal);
+    const year = this.$date.getFullYear();
+    const currentDate = `${year}-${month}-${day}`;
+    const setDate = `${currentDate}T${time ? time : '00:01:00'}`;
 
-    let day = this.$date.getDate();
-    let monthOriginal = this.$date.getMonth() + 1;
-    let month = this.dateTimeHelper(monthOriginal);
-    let year = this.$date.getFullYear();
-    let currentDate = `${year}-${month}-${day}`;
-    let setDate = `${currentDate}T${time ? time : '00:01:00'}`;
+    if ( this.$timerInterval ) clearInterval(this.$timerInterval);
 
     this.$commonDate = new Date(setDate);
 
@@ -62,9 +62,9 @@ export default class AppTariff {
     this.$commonDate = this.$commonDate.setSeconds(this.$commonDate.getSeconds() - 1);
     this.$commonDate = new Date(this.$commonDate);
 
-    let hours = this.dateTimeHelper(this.$commonDate.getHours());
-    let minutes = this.dateTimeHelper(this.$commonDate.getMinutes());
-    let seconds = this.dateTimeHelper(this.$commonDate.getSeconds());
+    const hours = this.dateTimeHelper(this.$commonDate.getHours());
+    const minutes = this.dateTimeHelper(this.$commonDate.getMinutes());
+    const seconds = this.dateTimeHelper(this.$commonDate.getSeconds());
 
     this.$timerDisplay.innerHTML = `${hours}:${minutes}:${seconds}`;
 
