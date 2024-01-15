@@ -1,0 +1,33 @@
+
+.tariff {
+  @include full-width(block);
+
+  margin: 48px 0;
+
+  &__head {
+    color: $gray;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  &__list {
+    @include full-width(flex);
+
+    column-gap: 24px;
+    margin-top: 48px;
+  }
+}
+
+@media screen and (max-width: $breakpointTabletPortrait) {
+  .tariff {
+    &__list {
+      flex-direction: column;
+      row-gap: 12px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+
+.root {
+  @include full-wh(flex);
+
+  flex-direction: column;
+
+  &__content {
+    flex: 1;
+  }
+}
+
+.container {
+  @include full-width(block);
+
+  max-width: calc(#{$siteContentWidth} + #{$tabletContentPadding * 2}) ;
+  margin: 0 auto;
+  padding: 0 $tabletContentPadding;
+}
+
+@media screen and (max-width: $breakpointMobile) {
+  .container {
+    padding: 0 $mobileContentPadding;
+  }
+}

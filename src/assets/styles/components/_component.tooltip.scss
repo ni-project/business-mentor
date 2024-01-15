@@ -1,0 +1,57 @@
+
+.tooltip {
+  @include font(14px, 20px, $white, 400);
+
+  display: flex;
+  min-width: 300px;
+  margin-top: 14px;
+  padding: 8px 12px;
+  background: $black;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: 0.2s;
+  position: absolute;
+  right: -14px;
+  top: 100%;
+  z-index: 1;
+
+  &:before {
+    @include square(16px);
+
+    content: '';
+    background: $black;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 16px;
+    top: -5px;
+  }
+}
+
+@media screen and (max-width: $breakpointTabletPortrait) {
+  .tooltip {
+    transform: translateY(-8px);
+    top: unset;
+    bottom: calc(100% + 14px);
+
+    &:before {
+      top: unset;
+      bottom: -5px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpointMobile) {
+  .tooltip {
+    transform: translateY(8px);
+    top: 100%;
+    bottom: unset;
+
+    &:before {
+      top: -5px;
+      bottom: unset;
+    }
+  }
+}

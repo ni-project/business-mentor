@@ -1,0 +1,16 @@
+
+body {
+  @include full-wh(block);
+  @include font($fontSizeDesktop, $lineHeightDesktop, $primary, 400);
+
+  font-family: $fontGlobal;
+  background: $light;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (max-width: $breakpointTabletLandscape) {
+  body {
+    font-size: $fontSizeMobile;
+    line-height: $lineHeightMobile;
+  }
+}

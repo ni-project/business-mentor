@@ -1,0 +1,8 @@
+
+.footer {
+  @include full-width(block);
+  @include font(14px, 20px, $primary, 400);
+
+  padding: 16px 0;
+  background: $white;
+}

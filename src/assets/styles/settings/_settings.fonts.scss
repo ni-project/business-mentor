@@ -1,0 +1,49 @@
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url('../fonts/sf-ui-display-regular-400.woff') format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url('../fonts/sf-ui-display-semibold-600.woff') format("woff");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url('../fonts/sf-ui-display-bold-700.woff') format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+$fontGlobal: 'SF UI Display', sans-serif;
+
+$fontSizeDesktop: 16px;
+$lineHeightDesktop: 24px;
+
+$fontSizeMobile: 14px;
+$lineHeightMobile: 20px;
+
+$H_color: $primary;
+
+$H1_fontSize:          56px;
+$H1_lineHeight:        70px;
+
+$H4_fontSize:          32px;
+$H4_lineHeight:        44px;
+
+$H1_fontSize_tablet:   48px;
+$H1_lineHeight_tablet: 64px;
+
+$H4_fontSize_tablet:   24px;
+$H4_lineHeight_tablet: 32px;
+
+$H1_fontSize_mobile:   32px;
+$H1_lineHeight_mobile: 40px;
+
+$H4_fontSize_mobile:   20px;
+$H4_lineHeight_mobile: 28px;

@@ -1,0 +1,12 @@
+
+.bank-list {
+  display: inline-flex;
+
+  img {
+    @include square(22px);
+
+    &:not(:first-child) {
+      margin-left: -10px;
+    }
+  }
+}

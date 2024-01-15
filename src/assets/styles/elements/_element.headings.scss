@@ -1,0 +1,36 @@
+
+h1, .h1 {
+  @include font($H1_fontSize, $H1_lineHeight, $H_color, 600);
+
+  margin: 0;
+}
+
+h4, .h4 {
+  @include font($H4_fontSize, $H4_lineHeight, $H_color, 600);
+
+  margin: 0;
+}
+
+@media screen and (max-width: $breakpointTabletLandscape) {
+  h1, .h1 {
+    font-size: $H1_fontSize_tablet;
+    line-height: $H1_lineHeight_tablet;
+  }
+
+  h4, .h4 {
+    font-size: $H4_fontSize_tablet;
+    line-height: $H4_lineHeight_tablet;
+  }
+}
+
+@media screen and (max-width: $breakpointMobile) {
+  h1, .h1 {
+    font-size: $H1_fontSize_mobile;
+    line-height: $H1_lineHeight_mobile;
+  }
+
+  h4, .h4 {
+    font-size: $H4_fontSize_mobile;
+    line-height: $H4_lineHeight_mobile;
+  }
+}
